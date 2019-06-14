@@ -19,10 +19,10 @@ module.exports = function(sequelize, DataTypes) {
       });
     };
 
-    Lease.associate = function(models) {
+    Tenant.associate = function(models) {
         // Associating Author with Posts
         // When an Author is deleted, also delete any associated Posts
-        Lease.hasMany(models.Bills, {
+        Tenant.hasMany(models.Bills, {
           onDelete: "cascade"
         });
       };
