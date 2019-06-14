@@ -1,0 +1,12 @@
+<table id="current-tenant-table">
+    {{#each Tenant}}
+        <tr>
+            <td><p>Name</p><p>{{name}}</p></td>
+            <td><p>Email</p><p>{{email_address}}</p></td>
+            <td><p>DOB</p><p>{{date_of_birth}}</p></td>
+            <td><p>Phone</p><p>{{phone_number}}</p></td>
+            <td><p>Move In</p><p>{{move_in_date}}</p></td>
+            <td><p>Move Out</p><p>{{move_out_date}}</p></td>
+        </tr>
+    {{/each}}
+</table>

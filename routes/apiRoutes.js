@@ -24,6 +24,22 @@ module.exports = function(app) {
 
 
 
+  /* COMPLEXES */
+
+  // Get one complex by ID
+  app.get("/api/complex", function(req, res) {
+    db.Complex.findAll({}).then(function(dbComplex) {
+      res.json(dbComplex);
+    });
+  });
+
+
+  /* UNITS */
+
+  // Get all or one units per ID
+
+
+  /* TENANTS */
 
   // Get all or one tenants per ID
   app.get("/api/tenants", function(req, res) {
@@ -32,10 +48,16 @@ module.exports = function(app) {
     });
   });
 
+
+  /* BILLS */
+
   // Get all or one bills per ID
-  // Get one complex
+  
+
+  /* LEASES */
+
   // Get all or one leases per ID
-  // Get all or one units per ID
+  
 
 
 };
