@@ -21,4 +21,21 @@ module.exports = function(app) {
       res.json(dbExample);
     });
   });
+
+
+
+
+  // Get all or one tenants per ID
+  app.get("/api/tenants", function(req, res) {
+    db.Example.findAll({}).then(function(dbTenants) {
+      res.json(dbTenants);
+    });
+  });
+
+  // Get all or one bills per ID
+  // Get one complex
+  // Get all or one leases per ID
+  // Get all or one units per ID
+
+
 };
