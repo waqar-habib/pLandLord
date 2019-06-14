@@ -2,7 +2,7 @@
 
 > Deployed Link: Coming Soon
 
-> pLandLord is a leasing CRM tht gives the apartment complex management the abilty to efficiently manage their's tenants leases, bills, look up basic info on tenants, check unit availability and manage revenue data based on lease and bill collection. 
+> pLandLord is a leasing CRM that gives the apartment complex management the abilty to efficiently manage their tenants leases and bills, look up basic info on tenants, check unit availability and manage revenue data based on lease and bill collection. 
 
 ## Developers
 
