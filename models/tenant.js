@@ -11,13 +11,21 @@ module.exports = function(sequelize, DataTypes) {
       
     });
   
-    Unit.associate = function(models) {
+    Tenant.associate = function(models) {
       // Associating Author with Posts
       // When an Author is deleted, also delete any associated Posts
-      Unit.hasMany(models.Tenant, {
+      Tenant.hasMany(models.Lease, {
         onDelete: "cascade"
       });
     };
+
+    Lease.associate = function(models) {
+        // Associating Author with Posts
+        // When an Author is deleted, also delete any associated Posts
+        Lease.hasMany(models.Bills, {
+          onDelete: "cascade"
+        });
+      };
   
-    return Unit;
+    return Tenant;
   };
