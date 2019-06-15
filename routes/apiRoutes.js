@@ -38,10 +38,22 @@ module.exports = function(app) {
     });
   });
 
+  // Displays all of a Tenants Current Bills
+  app.get("/api/tenant/:id", function(req, res) {
+    db.Unit.findOne({
+      where: {
+        id: req.params.id,
+        include: [db.Bills]
+      }
+    }).then(function(dbtenants) {
+      res.json(dbtenants);
+    });
+  });
+
 // ALL UNIT RELATED ROUTES
   // Displays all tenants currently living in one unit
   app.get("/api/units/:id", function(req, res) {
-    db.Unit.findOne({
+    db.Unit.findAll({
       where: {
         id: req.params.id,
         include: [db.Tenant]
@@ -120,6 +132,16 @@ app.get("/api/lease/:term", function(req, res) {
     res.json(dbtenants);
   });
 });
+
+
+
+// ALL BILL RELATED ROUTES
+
+// Displays which Bills belong to specific unit
+
+
+
+
 
 
 
