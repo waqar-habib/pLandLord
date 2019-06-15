@@ -1,12 +1,12 @@
 module.exports = function(sequelize, DataTypes) {
     var Complex = sequelize.define("Complex", {
       // Giving the Author model a name of type STRING
-      id: DataTypes.id,
+     
       name: DataTypes.STRING,
       address: DataTypes.STRING,
       state: DataTypes.STRING,
-      zip: DataTypes.INT,
-      phone: DataTypes.INT
+      zip: DataTypes.INTEGER,
+      phone: DataTypes.INTEGER
     });
   
     Complex.associate = function(models) {
