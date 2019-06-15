@@ -1,11 +1,11 @@
 module.exports = function(sequelize, DataTypes) {
     var Bill= sequelize.define("Unit", {
       // Giving the Author model a name of type STRING
-      id: DataTypes.id,
-      complex_id: DataTypes.INT,
-      unit_id: DataTypes.INT,
-      tenant_id: DataTypes.INT,
-      lease_id: DataTypes.INT,
+   
+      complex_id: DataTypes.INTEGER,
+      unit_id: DataTypes.INTEGER,
+      tenant_id: DataTypes.INTEGER,
+      lease_id: DataTypes.INTEGER,
       date: DataTypes.DATEONLY
     });
   
