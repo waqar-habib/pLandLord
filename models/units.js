@@ -1,11 +1,11 @@
 module.exports = function(sequelize, DataTypes) {
     var Unit= sequelize.define("Unit", {
-      id: DataTypes.ID,
-      number: DataTypes.INT,
-      base_price: DataTypes.INT,
-      number_of_rooms: DataTypes.INT,
-      floor: DataTypes.INT,
-      building: DataTypes.INT
+     
+      number: DataTypes.INTEGER,
+      base_price: DataTypes.INTEGER,
+      number_of_rooms: DataTypes.INTEGER,
+      floor: DataTypes.INTEGER,
+      building: DataTypes.INTEGER
     });
   
     Unit.associate = function(models) {

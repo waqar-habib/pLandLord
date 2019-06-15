@@ -1,13 +1,13 @@
 module.exports = function(sequelize, DataTypes) {
     var Lease= sequelize.define("Tenant", {
       // Giving the Author model a name of type STRING
-      id: DataTypes.id,
+    
       start_date: DataTypes.DATEONLY,
       end_date: DataTypes.DATEONLY,
-      term: DataTypes.INT,
+      term: DataTypes.INTEGER,
       url: DataTypes.STRING,
-      unit_id: DataTypes.INT,
-      tenant_id: DataTypes.INT,
+      unit_id: DataTypes.INTEGER,
+      tenant_id: DataTypes.INTEGER,
       month_to_month:DataTypes.BOOLEAN
       
     });
