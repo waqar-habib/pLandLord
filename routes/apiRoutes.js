@@ -38,7 +38,7 @@ module.exports = function(app) {
     });
   });
 
-  // Displays all of a Tenants Current Bills
+  // Displays all of a Tenants Current
   app.get("/api/tenant/:id", function(req, res) {
     db.Unit.findOne({
       where: {
