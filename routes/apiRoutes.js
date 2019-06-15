@@ -1,5 +1,7 @@
 var db = require("../models");
 const moment = require("moment");
+
+
 // ALL TENANT RELATED API ROUTES
 
 module.exports = function(app) {
@@ -30,6 +32,7 @@ module.exports = function(app) {
     db.Tenant.findAll({
       where: {
         move_out_date: {
+          $gt: startTime,
           $lte: moment().add(30, "days").toDate()  // Ask Tish how to make this value one month in time.
         }
       }
