@@ -1,17 +1,41 @@
 var db = require("../models");
 
+
+
+// ALL TENANT RELATED API ROUTES
+
 module.exports = function(app) {
-  // Get all examples
-  app.get("/api/examples", function(req, res) {
-    db.Example.findAll({}).then(function(dbExamples) {
-      res.json(dbExamples);
+  // Displays all tenants currently living in the complex
+  app.get("/api/tenants", function(req, res) {
+    db.tenant.findAll({}).then(function(dbtenants) {
+      res.json(dbtenants);
     });
   });
 
-  // Create a new example
-  app.post("/api/examples", function(req, res) {
-    db.Example.create(req.body).then(function(dbExample) {
-      res.json(dbExample);
+  
+  
+  app.get("/api/tenants/:unit", function(req, res) {
+    // 2; Displays all tenants living in a specific unit
+    db.Tenant.findAll({
+      where: {
+        unit: req.params.unit,
+        include: [db.Unit]
+      }
+    }).then(function(dbtenants) {
+      res.json(dbtenants);
+    });
+  });
+  
+  app.get("/api/tenants/:shortleases", function(req, res) {
+    // 2; Displays all tenants thast have one month or less left on their lease
+    db.Tenant.findAll({
+      where: {
+        move_out_date: {
+          lte:  // soon to be replaced by [Op.lte]
+        }
+      }
+    }).then(function(dbtenants) {
+      res.json(dbtenants);
     });
   });
 
