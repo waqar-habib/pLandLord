@@ -1,0 +1,22 @@
+<section id="current-tenant-details">
+
+    {{#each Tenant}}
+
+        <!-- Check to make sure this syntax is correct. -->
+        {{#if id = this_id}}
+            <div>
+                <div><p>Name</p><p>{{name}}</p></div>
+                <div><p>Email</p><p>{{email_address}}</p></div>
+                <div><p>DOB</p><p>{{date_of_birth}}</p></div>
+                <div><p>Phone</p><p>{{phone_number}}</p></div>
+                <div><p>Move In</p><p>{{move_in_date}}</p></div>
+                <div><p>Move Out</p><p>{{move_out_date}}</p></div>
+
+                <div><p>Unit Number</p><p>{{unit_number}}</p></div>
+
+            </div>
+        {{/if}}
+
+    {{/each}}
+
+</section>
