@@ -11,21 +11,21 @@ module.exports = function(sequelize, DataTypes) {
       
     });
   
-    // Tenant.associate = function(models) {
-    //   // Associating Tenant with with Lease
-    //   // When a Tenant is deleted, also delete any associated Leases
-    //   Tenant.hasMany(models.Lease, {
-    //     onDelete: "cascade"
-    //   });
-    // };
+    Tenant.associate = function(models) {
+      // Associating Tenant with with Lease
+      // When a Tenant is deleted, also delete any associated Leases
+      Tenant.hasMany(models.Lease, {
+        onDelete: "cascade"
+      });
+    };
 
-    // Tenant.associate = function(models) {
-    //     // Associating Tenant with Bills
-    //     // When a Tenant is deleted, also delete any associated Bills
-    //     Tenant.hasMany(models.Bill, {
-    //       onDelete: "cascade"
-    //     });
-    //   };
+    Tenant.associate = function(models) {
+        // Associating Tenant with Bills
+        // When a Tenant is deleted, also delete any associated Bills
+        Tenant.hasMany(models.Bill, {
+          onDelete: "cascade"
+        });
+      };
   
     return Tenant;
   };

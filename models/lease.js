@@ -1,5 +1,5 @@
 module.exports = function(sequelize, DataTypes) {
-    var Lease= sequelize.define("Tenant", {
+    var Lease= sequelize.define("Lease", {
       // Giving the Author model a name of type STRING
     
       start_date: DataTypes.DATEONLY,

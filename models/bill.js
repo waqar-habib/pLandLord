@@ -1,5 +1,5 @@
 module.exports = function(sequelize, DataTypes) {
-    var Bill= sequelize.define("Unit", {
+    var Bill= sequelize.define("Bill", {
       // Giving the Author model a name of type STRING
    
       complex_id: DataTypes.INTEGER,
