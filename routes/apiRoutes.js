@@ -14,11 +14,11 @@ module.exports = function(app) {
 
   
   
-  app.get("/api/units/:id", function(req, res) {
+  app.get("/api/units/:building", function(req, res) {
     //  Displays all tenants living in a specific building
     db.Unit.findAll({
       where: {
-        building: req.params.id,
+        building: req.params.building,
         include: [db.Tenant]
       }
     }).then(function(dbtenants) {
@@ -41,12 +41,12 @@ module.exports = function(app) {
     });
   });
 
-  // Displays all of a Tenants Current
+  // Displays all of a Tenants Current Bills
   app.get("/api/tenant/:id", function(req, res) {
     db.Unit.findOne({
       where: {
         id: req.params.id,
-        include: [db.Bills]
+        include: [db.Bill]
       }
     }).then(function(dbtenants) {
       res.json(dbtenants);
@@ -135,7 +135,9 @@ app.get("/api/lease/:term", function(req, res) {
     res.json(dbtenants);
   });
 });
+
 };
+
 
 
 
