@@ -1,3 +1,2 @@
-DROP DATABASE IF EXISTS complex_db;
-CREATE DATABASE complex_db;
+CREATE DATABASE IF NOT EXISTS complex_db;
 
