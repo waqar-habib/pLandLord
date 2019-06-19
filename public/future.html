@@ -11,21 +11,20 @@
   <title>pLandLord</title>
 
   <!-- Bootstrap core CSS -->
-  <link href="public/startbootstrap-landing-page-gh-pages/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="template/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <!-- Custom fonts for this template -->
-  <link href="public/startbootstrap-landing-page-gh-pages/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
-  <link href="public/startbootstrap-landing-page-gh-pages/vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet" type="text/css">
+  <link href="template/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+  <link href="template/vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
 
   <!-- Custom styles for this template -->
-  <link href="public/startbootstrap-landing-page-gh-pages/css/landing-page.css" rel="stylesheet">
-
-  <link href="public/template/css/landing-page.css" rel="stylesheet">
-  <link href="public/styles/styles.css" rel="stylesheet">
+  <link href="template/css/landing-page.css" rel="stylesheet">
+  <link href="styles/styles.css" rel="stylesheet">
 
 </head>
 
 <body>
+
   <!-- Navigation -->
   <nav class="navbar navbar-light bg-light static-top">
     <div class="container">
@@ -33,8 +32,100 @@
       <a class="btn btn-primary" href="#">Log In</a>
     </div>
   </nav>
-  
-  {{{body}}}
+
+
+
+  <!--
+  <section id="future-table">
+
+    <div class="search-bar">
+
+
+        <form action="">
+            <input type="text" name="future-search">
+        </form>
+
+
+    </div>
+
+    <div class="table-data">
+
+        <div class="column-titles">
+            <div class="name">
+                <p>Name</p>
+            </div>
+            <div class="email">
+                <p>Email</p>
+            </div>
+            <div class="dob">
+                <p>DOB</p>
+            </div>
+            <div class="phone">
+                <p>Phone</p>
+            </div>
+            <div class="move-in">
+                <p>Move In Date</p>
+            </div>
+            <div class="move-out">
+                <p>Move Out Date</p>
+            </div>
+        </div>-->
+
+
+        <!-- Table rows -->
+        <!-- For each future record, -->
+            <!-- Create a row. -->
+
+    
+            <!--
+    </div>
+
+</section>
+-->
+
+
+
+<section id="future-form">
+
+    <form action="">
+        <div class="name">
+            <p>Name</p>
+            <input type="text" name="name">
+        </div>
+        <div class="email">
+            <p>Email</p>
+            <input type="text" name="email_address">
+        </div>
+        
+
+        <div class="dob">
+            <p>DOB</p>
+            <input type="text" name="date_of_birth">
+        </div>
+        
+
+        <div class="phone">
+            <p>Phone</p>
+            <input type="text" name="phone_number">
+        </div>
+
+
+        <div class="move-in">
+            <p>Move In Date</p>
+            <input type="text" name="move_in_date">
+        </div>
+        <div class="move-out">
+            <p>Move Out Date</p>
+            <input type="text" name="move_out_date">
+        </div>
+
+
+        <!-- Submit Button -->
+        <input type="submit" name="Submit">
+
+    </form>
+
+</section>
 
   <!-- Footer -->
   <footer class="footer bg-light">
@@ -87,6 +178,8 @@
   <!-- Bootstrap core JavaScript -->
   <script src="template/vendor/jquery/jquery.min.js"></script>
   <script src="template/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="js/custom.js"></script>
+
 </body>
 
 </html>
