@@ -1,3 +1,118 @@
 .list-group-item {
   line-height: 2.5;
 }
+
+
+
+/* Future Page Styling */
+
+#future-form {
+
+}
+
+#future-form > .container {
+  width: 60%;
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+#future-form h4 {
+  
+  font-size: 2.0em;
+  font-weight: normal;
+  color: #777;
+  margin-bottom: 0px;
+}
+
+#future-form h5 {
+  margin-bottom: 20px;
+    font-weight: normal;
+    font-size: 1.0em;
+    color: #ccc;
+}
+
+#future-form form {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  height: 320px;
+}
+
+#future-form form > div {
+  width: 50%;
+}
+
+future-form form > div > p {
+  
+}
+
+#future-form form input {
+  width: 80%;
+  margin-bottom: 10px;
+  height: 40px;
+  padding: 10px;
+}
+
+#future-form .name {
+
+}
+
+#future-form .email {
+
+}
+
+
+/*
+#future-table {
+
+}
+
+#future-table .search-bar {
+
+}
+
+#future-table .search-bar form {
+
+}
+
+#future-table .search-bar input {
+
+}
+
+#future-table .table-data {
+
+}
+
+#future-table .column-titles {
+
+}
+
+#future-table .column-titles p {
+
+}
+
+#future-table .column-titles .name {
+  
+}
+
+#future-table .column-titles .email {
+
+}
+
+#future-table .column-titles .dob {
+
+}
+
+#future-table .column-titles .phone {
+
+}
+
+#future-table .column-titles .move-in {
+
+}
+
+#future-table .column-titles .move-out {
+
+}
+*/
