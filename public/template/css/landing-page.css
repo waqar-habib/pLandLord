@@ -125,3 +125,10 @@ footer.footer {
   padding-top: 4rem;
   padding-bottom: 4rem;
 }
+
+.contact_bkground {
+  position: relative;
+  background-color: #343a40;
+  background: url("../img/bg-masthead.jpg") no-repeat;
+  background-size: cover;  
+}
