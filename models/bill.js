@@ -1,7 +1,6 @@
 module.exports = function(sequelize, DataTypes) {
     var Bill= sequelize.define("Bill", {
-      // Giving the Author model a name of type STRING
-   
+      
       unit_id: DataTypes.INTEGER,
       tenant_id: DataTypes.INTEGER,
       lease_id: DataTypes.INTEGER,
@@ -9,8 +8,7 @@ module.exports = function(sequelize, DataTypes) {
     });
   
     Bill.associate = function(models) {
-      // Associating Author with Posts
-      // When an Author is deleted, also delete any associated Posts
+    
       Bill.hasMany(models.Charge, {
         onDelete: "cascade"
       });
