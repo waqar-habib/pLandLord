@@ -1,3 +1,5 @@
+//PUSHED THIS ALTERNATE SYNTAX ON alternate-tenant-func BRANCH
+
 $(document).ready(function() {
     // Tenant Container holds all of our information regarding the Tenant searched
     var nameInput = $("#tenant-name");
