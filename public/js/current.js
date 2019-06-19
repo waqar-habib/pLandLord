@@ -5,17 +5,17 @@ $(document).ready(function() {
     var tenantContainer = $(".tenant-container");
     var tenantModelSelect = $("#modelselect");
     // Click events for the edit and delete buttons
-    $(document).on("click", "button.search", tenantSearch);
-    $(document).on("click", "button.delete", deleteTenant);
-    tenantModelSelect.on("change", handleModelChange);
+    $(document).on("submit", "#tsearch", tenantSearch);
+
+    // tenantModelSelect.on("change", handleModelChange);
    
 
-    getTenants();
+    
 
     function tenantSearch(event) {
         event.preventDefault();
         // Don't do anything if the name fields hasn't been filled out
-        if (!nameInput.val().trim().trim()) {
+        if (!nameInput.val()) {
           return;
         }
         // Calling the upsertAuthor function and passing in the value of the name input
@@ -24,7 +24,7 @@ $(document).ready(function() {
             .val()
             .trim()
         });
-      }
+      }    // $(document).on("click", "button.delete", deleteTenant);
     
 
     function getTenants() {
