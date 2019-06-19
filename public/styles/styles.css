@@ -6,6 +6,64 @@
 
 /* Future Page Styling */
 
+#future-form {
+
+}
+
+#future-form > .container {
+  width: 60%;
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+#future-form h4 {
+  
+  font-size: 2.0em;
+  font-weight: normal;
+  color: #777;
+  margin-bottom: 0px;
+}
+
+#future-form h5 {
+  margin-bottom: 20px;
+    font-weight: normal;
+    font-size: 1.0em;
+    color: #ccc;
+}
+
+#future-form form {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  height: 320px;
+}
+
+#future-form form > div {
+  width: 50%;
+}
+
+future-form form > div > p {
+  
+}
+
+#future-form form input {
+  width: 80%;
+  margin-bottom: 10px;
+  height: 40px;
+  padding: 10px;
+}
+
+#future-form .name {
+
+}
+
+#future-form .email {
+
+}
+
+
+/*
 #future-table {
 
 }
@@ -57,12 +115,4 @@
 #future-table .column-titles .move-out {
 
 }
-
-
-#future-form {
-
-}
-
-#future-form form {
-  
-}
+*/
