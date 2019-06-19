@@ -5,27 +5,27 @@ module.exports = function(sequelize, DataTypes) {
       name: DataTypes.STRING,
       email_address: DataTypes.STRING,
       date_of_birth: DataTypes.DATEONLY,
-      phone_number: DataTypes.INTEGER,
+      phone_number: DataTypes.STRING,
       move_in_date: DataTypes.DATEONLY,
       move_out_date: DataTypes.DATEONLY
       
     });
   
-    // Tenant.associate = function(models) {
-    //   // Associating Tenant with with Lease
-    //   // When a Tenant is deleted, also delete any associated Leases
-    //   Tenant.hasMany(models.Lease, {
-    //     onDelete: "cascade"
-    //   });
-    // };
+    Tenant.associate = function(models) {
+      // Associating Tenant with with Lease
+      // When a Tenant is deleted, also delete any associated Leases
+      Tenant.hasMany(models.Lease, {
+        onDelete: "cascade"
+      });
+    };
 
-    // Tenant.associate = function(models) {
-    //     // Associating Tenant with Bills
-    //     // When a Tenant is deleted, also delete any associated Bills
-    //     Tenant.hasMany(models.Bill, {
-    //       onDelete: "cascade"
-    //     });
-    //   };
+    Tenant.associate = function(models) {
+        // Associating Tenant with Bills
+        // When a Tenant is deleted, also delete any associated Bills
+        Tenant.hasMany(models.Bill, {
+          onDelete: "cascade"
+        });
+      };
   
     return Tenant;
   };
