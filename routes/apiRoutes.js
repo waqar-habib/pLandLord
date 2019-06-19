@@ -6,8 +6,8 @@ const moment = require("moment");
 
 module.exports = function(app) {
   // Displays all tenants currently living in the complex
-  app.get("/api/tenant", function(req, res) {
-    db.tenant.findAll({}).then(function(dbtenants) {
+  app.get("/api/tenants", function(req, res) {
+    db.Tenant.findAll({}).then(function(dbtenants) {
       res.json(dbtenants);
     });
   });
@@ -41,7 +41,7 @@ module.exports = function(app) {
     });
   });
 
-  // Displays all of a Tenants Current
+  // Displays all of a Tenants Current Bills
   app.get("/api/tenant/:id", function(req, res) {
     db.Unit.findOne({
       where: {
