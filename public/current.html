@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <title>pLandLord</title>
@@ -8,7 +9,8 @@
   <meta content="" name="description">
 
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Lato:900i|Open+Sans:400,400i|Poppins:300,400,500,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lato:900i|Open+Sans:400,400i|Poppins:300,400,500,700&display=swap"
+    rel="stylesheet">
 
   <!-- Bootstrap CSS File -->
   <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -28,107 +30,111 @@
   Header
   ============================-->
   <header id="header">
-      <div class="container">
-  
-        <div id="logo" class="pull-left">
-          <h1><a href="home.html">pLandLord</a></h1>
-        </div>
-  
-        <nav id="nav-menu-container">
-          <ul class="nav-menu">
-            <li class="menu-active"><a href="home.html#home">Home</a></li>
-            <li><a href="home.html#services">Utilities</a></li>
-            <li><a href="home.html#team">Team</a></li>
-            <li><a href="home.html#contact">Contact Us</a></li>
-          </ul>
-        </nav><!-- #nav-menu-container -->
+    <div class="container">
+
+      <div id="logo" class="pull-left">
+        <h1><a href="home.html">pLandLord</a></h1>
       </div>
-    </header><!-- #header -->
+
+      <nav id="nav-menu-container">
+        <ul class="nav-menu">
+          <li class="menu-active"><a href="home.html#home">Home</a></li>
+          <li><a href="home.html#services">Utilities</a></li>
+          <li><a href="home.html#team">Team</a></li>
+          <li><a href="home.html#contact">Contact Us</a></li>
+        </ul>
+      </nav><!-- #nav-menu-container -->
+    </div>
+  </header><!-- #header -->
 
   <!--==========================
     Hero Section
   ============================-->
   <section id="hero">
-      <div class="hero-container">
-        <h1>Current Tenants</h1>
-        <h2>Query vital information about all current tenants</h2>
+    <div class="hero-container">
+      <h1>Current Tenants</h1>
+      <h2>Query vital information about all current tenants</h2>
 
-      </div>
+    </div>
   </section><!-- #hero -->
 
-    <!--==========================
+  <!--==========================
     Call To Action Section
     ============================-->
-    <section id="call-to-action">
-        <div class="container wow fadeIn">
-          <div class="row">
-            <div class="col-lg-9 text-center text-lg-left">
-              <h3 class="cta-title">Search For an Existing Tenant</h3>
-              <form>
-                  <div id="tenant-form" class="form-row">
-                    <div class="col-lg-9 cta-btn-container text-center">
-                      <input id="tenant-name" type="name" class="form-control form-control-lg" placeholder="Tenant Name">
-                    </div>
-                    <div class="col-lg-3 cta-btn-container text-center">
-                        <button type="button" class= "tsearch cta-btn align-middle">Submit</button>
-                      </div>
-                  </div>
-                </form>
-            </div>
-
-          </div>
-  
-        </div>
-      </section><!-- #call-to-action -->
-
-
-  <main id= "main">
-      <!--Database Div-->
-
-  <section>
-      <div class="container">
-          <div class="row">
-              <div class="col-md-12 col-md-offset-2">
-                  <div class="tenant-container mt-3">
-                      <table class="table table-striped">
-                          <thead>
-                              <tr>
-                                  <th>Name</th>
-                                  <th>Email</th>
-                                  <th>Lease Details</th>
-                                  <th>Billing Details</th>
-                                  <th>Delete Tenant</th>
-                              </tr>
-                          </thead>
-                          <tbody>
-  
-                          </tbody>
-                      </table>
-                  </div>
+  <section id="call-to-action">
+    <div class="container wow fadeIn">
+      <div class="row">
+        <div class="col-lg-9 text-center text-lg-left">
+          <h3 class="cta-title">Search For an Existing Tenant</h3>
+          <form>
+            <div id="tenant-form" class="form-row">
+              <div class="col-lg-6 cta-btn-container text-center">
+                <input id="tenant-name" type="name" class="form-control form-control-lg" placeholder="Tenant Name">
               </div>
+              <div class="col-lg-3 cta-btn-container text-center">
+                <button type="button" class="tsearch cta-btn align-middle">Submit</button>
+              </div>
+              <div class="col-lg-3 cta-btn-container text-center">
+                  <button type="button" class="clear-tenants cta-btn align-middle">Clear</button>
+              </div>
+            </div>
+          </form>
+        </div>
+
+      </div>
+
+    </div>
+  </section><!-- #call-to-action -->
+
+
+  <main id="main">
+    <!--Database Div-->
+
+    <section>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 col-md-offset-2">
+            <div class="tenant-container mt-3">
+              <table class="table table-striped">
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Lease Details</th>
+                    <th>Billing Details</th>
+                    <th>Delete Tenant</th>
+                  </tr>
+                </thead>
+                <tbody>
+
+                </tbody>
+              </table>
+            </div>
           </div>
+        </div>
       </div>
     </section>
 
     <!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Detailed Tenant Info</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Detailed Tenant Info</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body modal-lease">
+
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
         </div>
       </div>
     </div>
-  </div>
 
   </main>
 
@@ -136,37 +142,37 @@
     Footer
   ============================-->
   <footer id="footer">
-      <div class="container">
-        <div class="copyright">
-          &copy; Copyright <strong>pLandLord</strong>. All Rights Reserved
-        </div>
-        <div class="credits">
-          Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
-        </div>
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong>pLandLord</strong>. All Rights Reserved
       </div>
-    </footer><!-- #footer -->
-  
-    <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
-  
-    <!-- JavaScript Libraries -->
-    <script src="lib/jquery/jquery.min.js"></script>
-    <script src="lib/jquery/jquery-migrate.min.js"></script>
-    <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
-    <script src="lib/wow/wow.min.js"></script>
-    <script src="lib/waypoints/waypoints.min.js"></script>
-    <script src="lib/counterup/counterup.min.js"></script>
-    <script src="lib/superfish/hoverIntent.js"></script>
-    <script src="lib/superfish/superfish.min.js"></script>
-  
-    <!-- Contact Form JavaScript File -->
-    <script src="contactform/contactform.js"></script>
-  
-    <!-- Template Main Javascript File -->
-    <script src="js/main.js"></script>
-    <script src="js/current.js"></script>
-  
- 
+      <div class="credits">
+        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+      </div>
+    </div>
+  </footer><!-- #footer -->
+
+  <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+
+  <!-- JavaScript Libraries -->
+  <script src="lib/jquery/jquery.min.js"></script>
+  <script src="lib/jquery/jquery-migrate.min.js"></script>
+  <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="lib/easing/easing.min.js"></script>
+  <script src="lib/wow/wow.min.js"></script>
+  <script src="lib/waypoints/waypoints.min.js"></script>
+  <script src="lib/counterup/counterup.min.js"></script>
+  <script src="lib/superfish/hoverIntent.js"></script>
+  <script src="lib/superfish/superfish.min.js"></script>
+
+  <!-- Contact Form JavaScript File -->
+  <script src="contactform/contactform.js"></script>
+
+  <!-- Template Main Javascript File -->
+  <script src="js/main.js"></script>
+  <script src="js/current.js"></script>
+
+
 
 </body>
 
