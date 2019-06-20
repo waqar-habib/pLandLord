@@ -7,6 +7,7 @@
 /* Future Page Styling */
 
 #future-form {
+  background: url("../template/img/bg-future-2.jpg") no-repeat center center;
   background-color: #f8f9fa;
 }
 
@@ -22,7 +23,7 @@
   
   font-size: 2.0em;
   font-weight: normal;
-  color: #777;
+  color: #fff;
   margin-bottom: 0px;
 }
 
@@ -38,15 +39,15 @@
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
-  height: 360px;
+  height: 380px;
 }
 
 #future-form form > div {
   width: 50%;
 }
 
-future-form form > div > p {
-
+#future-form form > div > p {
+  color: #ffffff;
 }
 
 #future-form form input {
@@ -54,6 +55,7 @@ future-form form > div > p {
   margin-bottom: 20px;
   height: 40px;
   padding: 10px;
+  border: 0px;
 }
 
 #future-form .name {
@@ -64,6 +66,19 @@ future-form form > div > p {
 
 }
 
+#confirm-box {
+  background-color: #aaaaaa;
+  border-radius: 20px;
+  color: #000000;
+  margin-top: 20px;
+  border: 0px;
+  opacity: 0.8;
+}
+
+#confirm-box:hover {
+  opacity: 1.0;
+  background-color: #cccccc;
+}
 
 .confirmon-overlay {
   background-color: black;
