@@ -42,12 +42,12 @@ module.exports = function(app) {
   });
 
   // Displays all of a Tenants Current Bills
-  app.get("/api/tenant/:id", function(req, res) {
-    db.Unit.findOne({
-      where: {
-        id: this.id,
-        include: [db.Bills]
-      }
+  app.get("/api/bills", function(req, res) {
+    db.Bill.findAll({
+      // where: {
+      //   id: req.body.id,
+      //   include: [db.Charges]
+      // }
     }).then(function(dbtenants) {
       res.json(dbtenants);
     });
