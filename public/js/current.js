@@ -3,54 +3,6 @@ $(document).ready(function () {
     var nameInput = $("#tenant-name");
     var tenantList = $("tbody");
     var tenantContainer = $(".tenant-container");
-<<<<<<< HEAD
-    
-    
-    // var tenantModelSelect = $("#modelselect");
-    // tenantModelSelect.on("change", handleModelChange);
-    // Click event for submit button
-    $(document).on("submit", ".tsearch", tenantSearch);
-    // $(document).on("click", "button.delete", deleteTenant);
-
-
-   
-    // Call getTenants 
-        getTenants()
-
-        function tenantSearch(event) {
-            event.preventDefault();
-            // Remain idle if no name is given
-            if (!nameInput.val().trim()) {
-                return;
-            }
-            //  getTenants function passes in the value of the name input
-            upsertTenant({
-            name: nameInput
-                .val()
-                .trim()
-            });
-        }  
-
-            function upsertTenant(tenantData) {
-                $.post("/api/tenant/:id", tenantData)
-                .then(getTenants);
-            }
-                
-        
-        
-        // $(document).on("click", "button.delete", deleteTenant);
-        
-
-            function getTenants() {
-                $.get("/api/tenants", function(data) {
-                var rowsToAdd = [];
-                for (var i = 0; i < data.length; i++) {
-                    rowsToAdd.push(createTenantRow(data[i]));
-                }
-                renderTenantList(rowsToAdd);
-                nameInput.val("");
-                });
-=======
 
     // Empty array that will hold the tenants retrieved from database
     var allUserInfo = [];
@@ -60,7 +12,7 @@ $(document).ready(function () {
     $(document).on("click", "#view-lease", showTenantInfo);
     $(document).on("click", ".clear-tenants", clearTable);
     // Link click event to Delete Button 
-    // $(document).on("click", "#delete-tenants", deleteTenant);
+    $(document).on("click", "#delete-tenants", deleteTenant);
 
     //Shows tenant info in modal on click. 
     function showTenantInfo(event) {
@@ -117,7 +69,6 @@ $(document).ready(function () {
             var rowsToAdd = [];
             for (var i = 0; i < data.length; i++) {
                 rowsToAdd.push(createTenantRow(data[i]));
->>>>>>> 984705f93497e0fb24ae2cbfe7b827927c84ac8c
             }
             renderTenantList(rowsToAdd);
             nameInput.val("");
@@ -147,25 +98,25 @@ $(document).ready(function () {
         // For now "View Billing Info" will show the same info as "View Details" but once we associate the correct model with this button it should be able to pull details from "bill.js"
         newTr.append("<td><button type ='button' class='btn btn-secondary' id='view-lease' data-userid=" + tenantData.id + ">View Details</button></td>");
         // For now this Delete button doesn't do anything until we can add DELETE function to it.
-        newTr.append("<td><button type ='button' class='btn btn-danger' id='view-lease' data-userid= tenantData.id>Delete</button></td>");
+        newTr.append("<td><button type ='button' class='btn btn-danger' id='delete-tenants' data-userid="  + tenantData.id + ">Delete</button></td>");
         return newTr;
     }
-});
 
-/*
+
+
 // PSEUDO CODE TO ADD DELETE button and have it delete tenants from db
-    1. Add this to api-routes.js. This should add functionality to remove tenant thru id from complex_db
-      app.delete("/api/tenants/:id", function(req, res) {
-        db.Tenant.destroy({
-        where: {
-        id: req.params.id
-      }
-      }).then(function(dbtenants) {
-        res.json(dbtenants);
-      });
-    });
+    // // 1. Add this to api-routes.js. This should add functionality to remove tenant thru id from complex_db
+    //   app.delete("/api/tenants/:id", function(req, res) {
+    //     db.Tenant.destroy({
+    //     where: {
+    //     id: req.params.id
+    //   }
+    //   }).then(function(dbtenants) {
+    //     res.json(dbtenants);
+    //   });
+    // });
 
-    2. Create a deleteTenant Function 
+    // 2. Create a deleteTenant Function 
       function deleteTenant() {
       var listItemData = $(this).parent("td").parent("tr").data("tenants");
       var id = listItemData.id;
@@ -175,8 +126,8 @@ $(document).ready(function () {
       })
         .then(getTenants);
       }
-     });
 
-     3. Review the code above and uncomment ln 15
+    });
+    
 
-*/
+    //  3. Review the code above and uncomment ln 15
