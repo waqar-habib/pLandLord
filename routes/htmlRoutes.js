@@ -13,15 +13,12 @@ module.exports = function(app) {
 
     });
 
-    app.get("/revenue", function(req, res){
-        res.sendFile(path.join(__dirname, "../public/revenue.html"));
-
-    });
     app.get("/future", function(req, res){
         res.sendFile(path.join(__dirname, "../public/future.html"));
 
     });
-    
+  
+  
     app.get("*", function(req, res) {
         res.sendFile(path.join(__dirname, "../public/home.html"));
       });

@@ -45,7 +45,7 @@ module.exports = function(app) {
   app.get("/api/tenant/:id", function(req, res) {
     db.Unit.findOne({
       where: {
-        id: req.params.id,
+        id: this.id,
         include: [db.Bills]
       }
     }).then(function(dbtenants) {
@@ -136,13 +136,22 @@ app.get("/api/lease/:term", function(req, res) {
   });
 });
 
+app.delete("/api/tenants/:id", function(req, res) {
+  db.Tenant.destroy({
+  where: {
+  id: req.params.id
+}
+}).then(function(dbtenants) {
+  res.json(dbtenants);
+});
+});
+
+
 };
 
 
 
-// ALL BILL RELATED ROUTES
 
-// Displays which Bills belong to specific unit
 
 
 

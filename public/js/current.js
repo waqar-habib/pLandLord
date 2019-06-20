@@ -12,7 +12,7 @@ $(document).ready(function () {
     $(document).on("click", "#view-lease", showTenantInfo);
     $(document).on("click", ".clear-tenants", clearTable);
     // Link click event to Delete Button 
-    // $(document).on("click", "#delete-tenants", deleteTenant);
+    $(document).on("click", "#delete-tenants", deleteTenant);
 
     //Shows tenant info in modal on click. 
     function showTenantInfo(event) {
@@ -98,25 +98,25 @@ $(document).ready(function () {
         // For now "View Billing Info" will show the same info as "View Details" but once we associate the correct model with this button it should be able to pull details from "bill.js"
         newTr.append("<td><button type ='button' class='btn btn-secondary' id='view-lease' data-userid=" + tenantData.id + ">View Details</button></td>");
         // For now this Delete button doesn't do anything until we can add DELETE function to it.
-        newTr.append("<td><button type ='button' class='btn btn-danger' id='view-lease' data-userid= tenantData.id>Delete</button></td>");
+        newTr.append("<td><button type ='button' class='btn btn-danger' id='delete-tenants' data-userid="  + tenantData.id + ">Delete</button></td>");
         return newTr;
     }
-});
 
-/*
+
+
 // PSEUDO CODE TO ADD DELETE button and have it delete tenants from db
-    1. Add this to api-routes.js. This should add functionality to remove tenant thru id from complex_db
-      app.delete("/api/tenants/:id", function(req, res) {
-        db.Tenant.destroy({
-        where: {
-        id: req.params.id
-      }
-      }).then(function(dbtenants) {
-        res.json(dbtenants);
-      });
-    });
+    // // 1. Add this to api-routes.js. This should add functionality to remove tenant thru id from complex_db
+    //   app.delete("/api/tenants/:id", function(req, res) {
+    //     db.Tenant.destroy({
+    //     where: {
+    //     id: req.params.id
+    //   }
+    //   }).then(function(dbtenants) {
+    //     res.json(dbtenants);
+    //   });
+    // });
 
-    2. Create a deleteTenant Function 
+    // 2. Create a deleteTenant Function 
       function deleteTenant() {
       var listItemData = $(this).parent("td").parent("tr").data("tenants");
       var id = listItemData.id;
@@ -126,8 +126,8 @@ $(document).ready(function () {
       })
         .then(getTenants);
       }
-     });
 
-     3. Review the code above and uncomment ln 15
+    });
+    
 
-*/
+    //  3. Review the code above and uncomment ln 15
