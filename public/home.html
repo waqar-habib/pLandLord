@@ -1,144 +1,264 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="">
-  <meta name="author" content="">
-
   <title>pLandLord</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="" name="keywords">
+  <meta content="" name="description">
 
-  <!-- Bootstrap core CSS -->
-  <link href="template/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <!-- Custom fonts for this template -->
-  <link href="template/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
-  <link href="template/vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet" type="text/css">
-  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Lato:900i|Open+Sans:400,400i|Poppins:300,400,500,700&display=swap" rel="stylesheet">
 
-  <!-- Custom styles for this template -->
-  <link href="template/css/landing-page.css" rel="stylesheet">
-  <link href="styles/styles.css" rel="stylesheet">
+  <!-- Bootstrap CSS File -->
+  <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Libraries CSS Files -->
+  <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href="lib/animate/animate.min.css" rel="stylesheet">
+
+  <!-- Main Stylesheet File -->
+  <link href="css/style.css" rel="stylesheet">
 
 </head>
 
 <body>
 
-  <!-- Navigation -->
-  <nav class="navbar navbar-light bg-light static-top">
+  <!--==========================
+  Header
+  ============================-->
+  <header id="header">
     <div class="container">
-      <a class="navbar-brand" href="#">pLandLord</a>
-      <a class="btn btn-primary" href="#">Log In</a>
-    </div>
-  </nav>
 
-  <!-- Masthead -->
-  <header class="masthead text-white text-center">
-    <div class="overlay"></div>
-    <div class="container">
-      <div class="row">
-        <div class="col-xl-9 mx-auto">
-          <h1 class="mb-5">The One Stop Shop for all your leasing needs</h1>
+      <div id="logo" class="pull-left">
+        <h1><a href="home.html">pLandLord</a></h1>
+      </div>
+
+      <nav id="nav-menu-container">
+        <ul class="nav-menu">
+          <li class="menu-active"><a href="#hero">Home</a></li>
+          <li><a href="#services">Utilities</a></li>
+          <li><a href="#team">Team</a></li>
+          <li><a href="#contact">Contact Us</a></li>
+        </ul>
+      </nav><!-- #nav-menu-container -->
+    </div>
+  </header><!-- #header -->
+
+  <!--==========================
+    Hero Section
+  ============================-->
+  <section id="hero">
+    <div class="hero-container">
+      <h1>pLandLord</h1>
+      <h2>The One Stop CRM for all your leasing needs</h2>
+    </div>
+  </section><!-- #hero -->
+
+  <main id="main">
+
+    <!--==========================
+      Services Section
+    ============================-->
+    <section id="services">
+      <div class="container wow fadeIn">
+        <div class="section-header">
+          <h3 class="section-title">Utilities</h3>
+          <p class="section-description">Select one of the options below to get started</p>
+        </div>
+        <div class="row">
+          <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
+            <div class="box">
+              <div class="icon"><a href="current.html"><i class="fa fa-desktop"></i></a></div>
+              <h4 class="title"><a href="current.html">Current Tenants</a></h4>
+              <p class="description">Manage your existing tenants' leases. Search by name to pull up details about your tenants</p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.4s">
+            <div class="box">
+              <div class="icon"><a href="revenue.html"><i class="fa fa-bar-chart"></i></a></div>
+              <h4 class="title"><a href="revenue.html">Revenue</a></h4>
+              <p class="description">Track your total influx of revenue generated from existing tenants</p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.6s">
+            <div class="box">
+              <div class="icon"><a href="future.html"><i class="fa fa-paper-plane"></i></a></div>
+              <h4 class="title"><a href="future.html">Future Leads </a></h4>
+              <p class="description">Keep track of future unit inquiries</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- #services -->
+
+    <!--==========================
+      Team Section
+    ============================-->
+    <section id="team">
+      <div class="container wow fadeInUp">
+        <div class="section-header">
+          <h3 class="section-title">Team</h3>
+          <p class="section-description">Meet the hardworking team of developers behind pLandLord</p>
+        </div>
+        <div class="row">
+
+          <div class="col-lg-4 col-md-8">
+            <div class="member">
+              <div class="pic"><img src="img/team-2.png" alt="" width="75%"></div>
+              <h4>Waqar Habib</h4>
+              <span>Front-End Design + JavaScript Developer</span>
+              <div class="social">
+                <a href="http://www.waqarhabib.dev"><i class="fa fa-tv"></i></a>
+                <a href="https://github.com/waqar-habib"><i class="fa fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/waqarhabib94/"><i class="fa fa-linkedin"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-8">
+            <div class="member">
+              <div class="pic"><img src="img/team-3.jpg" alt=""></div>
+              <h4>Wes Morales-McCowin</h4>
+              <span>Database and Server Manager</span>
+              <div class="social">
+                <a href="http://www.waqarhabib.dev"><i class="fa fa-tv"></i></a>
+                <a href="https://github.com/waqar-habib"><i class="fa fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/waqarhabib94/"><i class="fa fa-linkedin"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-8">
+            <div class="member">
+              <div class="pic"><img src="img/team-4.jpg" alt=""></div>
+              <h4>Andy Bayles</h4>
+              <span>Back-End Developer</span>
+              <div class="social">
+                <a href="http://www.waqarhabib.dev"><i class="fa fa-tv"></i></a>
+                <a href="https://github.com/waqar-habib"><i class="fa fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/waqarhabib94/"><i class="fa fa-linkedin"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- #team -->
+
+    <!--==========================
+      Contact Section
+    ============================-->
+    <section id="contact">
+      <div class="container wow fadeInUp">
+        <div class="section-header">
+          <h3 class="section-title">Get in Touch!</h3>
+
         </div>
       </div>
-    </div>
-  </header>
+      <div class="container wow fadeInUp mt-5">
+        <div class="row justify-content-center">
 
-  <!-- Icons Grid -->
-  <section class="features-icons bg-light text-center">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-4">
-          <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
-            <div class="features-icons-icon d-flex">
-              <i class="icon-screen-desktop m-auto text-primary"></i>
+          <div class="col-lg-3 col-md-4">
+            <div class="info">
+              <div>
+                <i class="fa fa-map-marker"></i>
+                <p>9990 Richmond Avenue<br>Houston, TX 77042</p>
+              </div>
+
+              <div>
+                <i class="fa fa-envelope"></i>
+                <p><a href="mailto:waqarhabib94@aggienetwork.com?Subject=Hey%20There!" target="_top">Email Me!</a></p>
+              </div>
             </div>
-            <h3>Current Tenants</h3>
-            <p class="lead mb-0">Query vital information about all current tenants</p>
           </div>
-        </div>
-        <div class="col-lg-4">
-          <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
-            <div class="features-icons-icon d-flex">
-              <i class="icon-layers m-auto text-primary"></i>
+
+          <div class="col-lg-5 col-md-8">
+            <div class="form">
+              <div id="sendmessage">Your message has been sent. Thank you!</div>
+              <div id="errormessage"></div>
+              <form action="" method="post" role="form" class="contactForm">
+                <div class="form-group">
+                  <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                  <div class="validation"></div>
+                </div>
+                <div class="form-group">
+                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
+                  <div class="validation"></div>
+                </div>
+                <div class="form-group">
+                  <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+                  <div class="validation"></div>
+                </div>
+                <div class="form-group">
+                  <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
+                  <div class="validation"></div>
+                </div>
+                <div class="text-center"><button type="submit">Send Message</button></div>
+              </form>
             </div>
-            <h3>Future Leads</h3>
-            <p class="lead mb-0">Keep track of all future tenant leads</p>
-          </div>
-        </div>
-        <div class="col-lg-4">
-          <div class="features-icons-item mx-auto mb-0 mb-lg-3">
-            <div class="features-icons-icon d-flex">
-              <i class="icon-check m-auto text-primary"></i>
-            </div>
-            <h3>Revenue</h3>
-            <p class="lead mb-0">Easily track the revenue flow for your complex</p>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section><!-- #contact -->
 
-  <!-- Developer Team -->
-  <section class="testimonials text-center bg-light">
+  </main>
+
+  <!--==========================
+    Footer
+  ============================-->
+  <footer id="footer">
     <div class="container">
-      <h2 class="mb-5">Our Team</h2>
-      <div class="row">
-        <div class="col-lg-4">
-          <div class="testimonial-item mx-auto mb-5 mb-lg-0">
-            <img class="img-fluid rounded-circle mb-3" src="node_modules/startbootstrap-landing-page/img/testimonials-2.jpg" alt="">
-            <h5>Wes Morales-McCowin</h5>
-            <p class="font-weight-light mb-0">Database and Server Manager</p>
-          </div>
-        </div>
-        <div class="col-lg-4">
-          <div class="testimonial-item mx-auto mb-5 mb-lg-0">
-            <img class="img-fluid rounded-circle mb-3" src="node_modules/startbootstrap-landing-page/img/testimonials-2.jpg" alt="">
-            <h5>Waqar Habib</h5>
-            <p class="font-weight-light mb-0">Front-End Design + JavaScript Developer</p>
-          </div>
-        </div>
-        <div class="col-lg-4">
-          <div class="testimonial-item mx-auto mb-5 mb-lg-0">
-            <img class="img-fluid rounded-circle mb-3" src="node_modules/startbootstrap-landing-page/img/testimonials-2.jpg" alt="">
-            <h5>Andy Bayles</h5>
-            <p class="font-weight-light mb-0">Dashboard Developer</p>
-          </div>
-        </div>
+      <div class="copyright">
+        &copy; Copyright <strong>pLandLord</strong>. All Rights Reserved
+      </div>
+      <div>
+          <ul class="list-inline mt-4 text-center">
+              <li class="list-inline-item">
+                <a href="https://github.com/waqar-habib/pLandLord">GitHub Repo</a>
+              </li>
+              <li class="list-inline-item">&sdot;</li>
+              <li class="list-inline-item">
+                <a href="home.html#contact">Contact</a>
+              </li>
+              <li class="list-inline-item">&sdot;</li>
+              <li class="list-inline-item">
+                <a href="#">Terms of Use</a>
+              </li>
+              <li class="list-inline-item">&sdot;</li>
+              <li class="list-inline-item">
+                <a href="#">Privacy Policy</a>
+              </li>
+            </ul>
+      </div>
+      <div class="credits">
+          Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
       </div>
     </div>
-  </section>
+  </footer><!-- #footer -->
 
-  <!-- Footer -->
-  <footer class="footer bg-light">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-6 h-100 text-center text-lg-left my-auto">
-          <ul class="list-inline mb-2">
-            <li class="list-inline-item">
-              <a href="https://github.com/waqar-habib/pLandLord">GitHub Repo</a>
-            </li>
-            <li class="list-inline-item">&sdot;</li>
-            <li class="list-inline-item">
-              <a href="contact.html">Contact</a>
-            </li>
-            <li class="list-inline-item">&sdot;</li>
-            <li class="list-inline-item">
-              <a href="#">Terms of Use</a>
-            </li>
-            <li class="list-inline-item">&sdot;</li>
-            <li class="list-inline-item">
-              <a href="#">Privacy Policy</a>
-            </li>
-          </ul>
-          <p class="text-muted small mb-4 mb-lg-0">&copy; pLandLord 2019. All Rights Reserved.</p>
-        </div>
+  <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
 
-  <!-- Bootstrap core JavaScript -->
-  <script src="template/vendor/jquery/jquery.min.js"></script>
-  <script src="template/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <!-- JavaScript Libraries -->
+  <script src="lib/jquery/jquery.min.js"></script>
+  <script src="lib/jquery/jquery-migrate.min.js"></script>
+  <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="lib/easing/easing.min.js"></script>
+  <script src="lib/wow/wow.min.js"></script>
+  <script src="lib/waypoints/waypoints.min.js"></script>
+  <script src="lib/counterup/counterup.min.js"></script>
+  <script src="lib/superfish/hoverIntent.js"></script>
+  <script src="lib/superfish/superfish.min.js"></script>
+
+  <!-- Contact Form JavaScript File -->
+  <script src="contactform/contactform.js"></script>
+
+  <!-- Template Main Javascript File -->
+  <script src="js/main.js"></script>
+
+  <!-- Unsplash API Javascript File -->
+  <script src="js/unsplashapi.js"></script>  
 
 </body>
-
 </html>
