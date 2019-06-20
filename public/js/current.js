@@ -3,28 +3,41 @@ $(document).ready(function() {
     var nameInput = $("#tenant-name");
     var tenantList = $("tbody");
     var tenantContainer = $(".tenant-container");
+    
+    
     // var tenantModelSelect = $("#modelselect");
-    // Click events for the edit and delete buttons
-    $(document).on("submit", ".tsearch", tenantSearch);
-
     // tenantModelSelect.on("change", handleModelChange);
-   
+    // Click event for submit button
+    $(document).on("submit", ".tsearch", tenantSearch);
+    // $(document).on("click", "button.delete", deleteTenant);
 
+
+   
+    // Call getTenants 
         getTenants()
 
         function tenantSearch(event) {
             event.preventDefault();
-            // Don't do anything if the name fields hasn't been filled out
+            // Remain idle if no name is given
             if (!nameInput.val().trim()) {
                 return;
             }
-            // Calling the upsertAuthor function and passing in the value of the name input
-            getTenants({
+            //  getTenants function passes in the value of the name input
+            upsertTenant({
             name: nameInput
                 .val()
                 .trim()
             });
-        }    // $(document).on("click", "button.delete", deleteTenant);
+        }  
+
+            function upsertTenant(tenantData) {
+                $.post("/api/tenant/:id", tenantData)
+                .then(getTenants);
+            }
+                
+        
+        
+        // $(document).on("click", "button.delete", deleteTenant);
         
 
             function getTenants() {

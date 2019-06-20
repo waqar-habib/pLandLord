@@ -12,6 +12,11 @@ module.exports = function(app) {
         res.sendFile(path.join(__dirname, "../public/current.html"));
 
     });
+
+    app.get("/future", function(req, res){
+        res.sendFile(path.join(__dirname, "../public/future.html"));
+
+    });
   
   
     app.get("*", function(req, res) {

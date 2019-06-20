@@ -45,7 +45,7 @@ module.exports = function(app) {
   app.get("/api/tenant/:id", function(req, res) {
     db.Unit.findOne({
       where: {
-        id: req.params.id,
+        id: this.id,
         include: [db.Bills]
       }
     }).then(function(dbtenants) {
