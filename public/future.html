@@ -15,24 +15,48 @@
   <!-- Custom fonts for this template -->
   <link href="template/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
   <link href="template/vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet" type="text/css">
-  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Lato:900i|Open+Sans:400,400i|Poppins:300,400,500,700&display=swap" rel="stylesheet">
 
   <!-- Custom styles for this template -->
   <link href="template/css/landing-page.css" rel="stylesheet">
   <link href="styles/styles.css" rel="stylesheet">
+  <!--<link href="css/style.css" rel="stylesheet">-->
 
 </head>
 
 <body>
 
   <!-- Navigation -->
+  <!--
   <nav class="navbar navbar-light bg-light static-top">
     <div class="container">
-      <a class="navbar-brand" href="#">pLandLord</a>
+      <a class="navbar-brand" href="home.html">pLandLord</a>
       <a class="btn btn-primary" href="#">Log In</a>
     </div>
   </nav>
+  -->
 
+  <!--==========================
+  Header
+  ============================-->
+  <header id="header" class="header-fixed">
+    <div class="container">
+
+        <div id="logo" class="pull-left">
+        <h1><a href="home.html">pLandLord</a></h1>
+        </div>
+
+        <nav id="nav-menu-container">
+        <ul class="nav-menu">
+            <li><a href="home.html#hero">Home</a></li>
+            <li><a href="home.html#services">Utilities</a></li>
+            <li><a href="home.html#team">Team</a></li>
+            <li><a href="home.html#contact">Contact Us</a></li>
+        </ul>
+        </nav><!-- #nav-menu-container -->
+    </div>
+    </header><!-- #header -->
 
 
   <!--
@@ -87,14 +111,14 @@
 
 <section id="future-form">
     <div class="container">
-
-        <h4>Future Tenants</h4>
-        <h5>Enter a future tenant's information</h5>
-
+        <div class="form-title">
+            <h4>Future Tenants</h4>
+            <h5>Enter a future tenant's information</h5>
+        </div>
         <form action="">
             <div class="name">
                 <p>Name</p>
-                <input type="text" name="name" value="">
+                <input id="form-name" type="text" name="name" value="">
             </div>
             <div class="email">
                 <p>Email</p>
@@ -104,9 +128,13 @@
 
             <div class="dob">
                 <p>DOB</p>
-                <input type="text" name="date_of_birth">
+                <input type="date" name="date_of_birth">
             </div>
             
+            <div class="phone">
+                <p>Number of rooms</p>
+                <input type="text" name="numrooms">
+            </div>
 
             <div class="phone">
                 <p>Phone</p>
@@ -116,11 +144,12 @@
 
             <div class="move-in">
                 <p>Move In Date</p>
-                <input type="text" name="move_in_date">
+                <input type="date" name="move_in_date">
             </div>
+
             <div class="move-out">
                 <p>Move Out Date</p>
-                <input type="text" name="move_out_date">
+                <input type="date" name="move_out_date">
             </div>
 
 
@@ -134,6 +163,40 @@
 </section>
 
   <!-- Footer -->
+
+  <footer id="footer">
+        <div class="container">
+          <div class="copyright">
+            &copy; Copyright <strong>pLandLord</strong>. All Rights Reserved
+          </div>
+          <div>
+              <ul class="list-inline mt-4 text-center">
+                  <li class="list-inline-item">
+                    <a href="https://github.com/waqar-habib/pLandLord">GitHub Repo</a>
+                  </li>
+                  <li class="list-inline-item">&sdot;</li>
+                  <li class="list-inline-item">
+                    <a href="home.html#contact">Contact</a>
+                  </li>
+                  <li class="list-inline-item">&sdot;</li>
+                  <li class="list-inline-item">
+                    <a href="#">Terms of Use</a>
+                  </li>
+                  <li class="list-inline-item">&sdot;</li>
+                  <li class="list-inline-item">
+                    <a href="#">Privacy Policy</a>
+                  </li>
+                </ul>
+          </div>
+          <div class="credits">
+              Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+          </div>
+        </div>
+      </footer>
+
+      <!--<a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>-->
+
+  <!--
   <footer class="footer bg-light">
     <div class="container">
       <div class="row">
@@ -157,6 +220,8 @@
           </ul>
           <p class="text-muted small mb-4 mb-lg-0">&copy; pLandLord 2019. All Rights Reserved.</p>
         </div>
+    -->
+
         <!-- Social Media Icons
         <div class="col-lg-6 h-100 text-center text-lg-right my-auto">
           <ul class="list-inline mb-0">
@@ -192,6 +257,18 @@
     <!--<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>-->
 
     <script src="js/jquery.confirmon.js"></script>
+
+    <!--
+    <script src="lib/jquery/jquery.min.js"></script>
+    <script src="lib/jquery/jquery-migrate.min.js"></script>
+    <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/superfish/hoverIntent.js"></script>
+    <script src="lib/superfish/superfish.min.js"></script>
+    -->
 
 
     <!-- Custom JS -->
