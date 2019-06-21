@@ -75,7 +75,11 @@
                 <button type="button" class="tsearch cta-btn align-middle">Submit</button>
               </div>
               <div class="col-lg-3 cta-btn-container text-center">
-                  <button type="button" class="clear-tenants cta-btn align-middle">Clear</button>
+                <button type="button" class="clear-tenants cta-btn align-middle">Clear</button>
+              </div>
+
+              <div class="col-lg-3 cta-btn-container text-center">
+                  <button type="button" class="add-new-tenant cta-btn align-middle">Add Tenant</button>
               </div>
             </div>
           </form>
@@ -136,27 +140,82 @@
       </div>
     </div>
 
-        <!-- Billing Details Modal -->
-        <div class="modal fade" id="billingModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel">Detailed Billing Info</h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body modal-bills">
-  
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            </div>
+    <!-- Billing Details Modal -->
+    <div class="modal fade" id="billingModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Detailed Billing Info</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body modal-bills">
+
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
           </div>
         </div>
       </div>
+    </div>
 
+    <!-- Add New Tenant to DB Modal -->
+    <div class="modal fade" id="modalContactForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header text-center">
+            <h4 class="modal-title w-100 font-weight-bold">Add a New Tenant</h4>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body mx-3">
+            <div class="md-form mb-5">
+              <!--<i class="fas fa-user prefix grey-text"></i>-->
+              <input type="text" id="name" class="form-control validate">
+              <label data-error="wrong" data-success="right" for="form34">Tenant name</label>
+            </div>
+
+            <div class="md-form mb-5">
+              <!--<i class="fas fa-envelope prefix grey-text"></i>-->
+              <input type="email" id="email" class="form-control validate">
+              <label data-error="wrong" data-success="right" for="form29">Email Address</label>
+            </div>
+
+            <div class="md-form mb-5">
+              <!--<i class="fas fa-tag prefix grey-text"></i>-->
+              <input type="text" id="dob" class="form-control validate">
+              <label data-error="wrong" data-success="right" for="form32">DOB</label>
+            </div>
+
+            <div class="md-form mb-5">
+              <!--<i class="fas fa-tag prefix grey-text"></i>-->
+              <input type="text" id="phonenumber" class="form-control validate">
+              <label data-error="wrong" data-success="right" for="form32">Phone</label>
+            </div>
+
+            <div class="md-form mb-5">
+              <!--<i class="fas fa-tag prefix grey-text"></i>-->
+              <input type="text" id="move-in" class="form-control validate">
+              <label data-error="wrong" data-success="right" for="form32">Move-in Date</label>
+            </div>
+
+            <div class="md-form mb-5">
+              <!--<i class="fas fa-tag prefix grey-text"></i>-->
+              <input type="text" id="move-out" class="form-control validate">
+              <label data-error="wrong" data-success="right" for="form32">Move-out Date</label>
+            </div>
+
+          </div>
+          <div class="modal-footer d-flex justify-content-center">
+              <button type="button" class="submit-tenant btn btn-success">Add Tenant</button>
+          </div>
+        </div>
+      </div>
+    </div>
   </main>
 
   <!--==========================
@@ -192,7 +251,7 @@
   <!-- Template Main Javascript File -->
   <script src="js/main.js"></script>
   <script src="js/current.js"></script>
-
+  <script src="js/newtenant.js"></script>
 
 
 </body>

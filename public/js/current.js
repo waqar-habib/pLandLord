@@ -1,4 +1,5 @@
 $(document).ready(function () {
+    
     // Tenant Container holds all of our information regarding the Tenant searched
     var nameInput = $("#tenant-name");
     var tenantList = $("tbody");
@@ -12,6 +13,7 @@ $(document).ready(function () {
     $(document).on("click", "#view-lease", showTenantInfo);
     $(document).on("click", "#view-bills", showBillingInfo);
     $(document).on("click", ".clear-tenants", clearTable);
+
     // Link click event to Delete Button 
     $(document).on("click", "#delete-tenants", deleteTenant);
 
@@ -29,24 +31,25 @@ $(document).ready(function () {
         $("#exampleModal").modal("show");
     };
 
-
         // Shows tenant bills info in modal on click. 
     function showBillingInfo(event) {
         
-        const allUserBillInfo = $(event.target).data("billingid");
-        const selectedBillInfo = allUserBillInfo
+        const selectedBill = $(event.target).attr("data-billingid");
+        console.log(selectedBill);
+        const selectedBillInfo = allUserBillInfo.filter(user => user.id === selectedBill)[0];
         console.log(selectedBillInfo)
         $(".modal-bills").empty();
         $(".modal-bills").append('Unit Number: ' + selectedBillInfo.unit_id + '<br>');
         $(".modal-bills").append('Tenant Billing ID: ' + selectedBillInfo.tenant_id + '<br>');
         $(".modal-bills").append('Lease ID: ' + selectedBillInfo.lease_id + '<br>');
         $(".modal-bills").append('Billing Date: ' + selectedBillInfo.date + '<br>');
-        $("#exampleModal").modal("show");
+        $("#billingModal").modal("show");
+        getTenantBills(selectedBill);
     }
     
 
     getTenants();
-    getTenantBills();
+    
 
     function tenantSearch(event) {
         event.preventDefault();
@@ -71,7 +74,6 @@ $(document).ready(function () {
         }
         renderTenantList(rowsToAdd);
 
-        // add clear btn which clears the table and then calls getTenant func to reappened all the rows
     }
 
     // Connected to the Clear button. Empties out the existing search criteria and inserts the current tenant database back in tbody 
@@ -93,8 +95,8 @@ $(document).ready(function () {
             });
         }
 
-        function getTenantBills() {
-            $.get("/api/bills", function (data) {
+        function getTenantBills(billId) {
+            $.get("/api/bills/" + billId, function (data) {
                 allUserBillInfo = data
                 console.log(data)
             });
@@ -125,21 +127,7 @@ $(document).ready(function () {
         // For now this Delete button doesn't do anything until we can add DELETE function to it.
         newTr.append("<td><button type ='button' class='btn btn-danger' id='delete-tenants' data-userid="  + tenantData.id + ">Delete</button></td>");
         return newTr;
-    }
-
-
-
-// PSEUDO CODE TO ADD DELETE button and have it delete tenants from db
-    // // 1. Add this to api-routes.js. This should add functionality to remove tenant thru id from complex_db
-    //   app.delete("/api/tenants/:id", function(req, res) {
-    //     db.Tenant.destroy({
-    //     where: {
-    //     id: req.params.id
-    //   }
-    //   }).then(function(dbtenants) {
-    //     res.json(dbtenants);
-    //   });
-    // });
+    };
 
     // 2. Create a deleteTenant Function 
       function deleteTenant() {
@@ -153,6 +141,4 @@ $(document).ready(function () {
       }
 
     });
-    
 
-    //  3. Review the code above and uncomment ln 15
