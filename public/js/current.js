@@ -10,11 +10,12 @@ $(document).ready(function () {
     // Click events for the edit and delete buttons
     $(document).on("click", ".tsearch", tenantSearch);
     $(document).on("click", "#view-lease", showTenantInfo);
+    $(document).on("click", "#view-bills", showBillingInfo);
     $(document).on("click", ".clear-tenants", clearTable);
     // Link click event to Delete Button 
     $(document).on("click", "#delete-tenants", deleteTenant);
 
-    //Shows tenant info in modal on click. 
+    //Shows tenant lease info in modal on click. 
     function showTenantInfo(event) {
 
         const selectedUser = $(event.target).data("userid");
@@ -26,9 +27,26 @@ $(document).ready(function () {
         $(".modal-lease").append('Phone: ' + selectedUserInfo.phone_number + '<br>');
         $(".modal-lease").append('Lease Term: ' + selectedUserInfo.move_in_date + ' to ' + selectedUserInfo.move_out_date + '<br>');
         $("#exampleModal").modal("show");
+    };
+
+
+        // Shows tenant bills info in modal on click. 
+    function showBillingInfo(event) {
+        
+        const allUserBillInfo = $(event.target).data("billingid");
+        const selectedBillInfo = allUserBillInfo
+        console.log(selectedBillInfo)
+        $(".modal-bills").empty();
+        $(".modal-bills").append('Unit Number: ' + selectedBillInfo.unit_id + '<br>');
+        $(".modal-bills").append('Tenant Billing ID: ' + selectedBillInfo.tenant_id + '<br>');
+        $(".modal-bills").append('Lease ID: ' + selectedBillInfo.lease_id + '<br>');
+        $(".modal-bills").append('Billing Date: ' + selectedBillInfo.date + '<br>');
+        $("#exampleModal").modal("show");
     }
+    
 
     getTenants();
+    getTenantBills();
 
     function tenantSearch(event) {
         event.preventDefault();
@@ -63,17 +81,24 @@ $(document).ready(function () {
         getTenants();
     }
 
-    function getTenants() {
-        $.get("/api/tenants", function (data) {
-            allUserInfo = data
-            var rowsToAdd = [];
-            for (var i = 0; i < data.length; i++) {
-                rowsToAdd.push(createTenantRow(data[i]));
-            }
-            renderTenantList(rowsToAdd);
-            nameInput.val("");
-        });
-    }
+        function getTenants() {
+            $.get("/api/tenants", function (data) {
+                allUserInfo = data
+                var rowsToAdd = [];
+                for (var i = 0; i < data.length; i++) {
+                    rowsToAdd.push(createTenantRow(data[i]));
+                }
+                renderTenantList(rowsToAdd);
+                nameInput.val("");
+            });
+        }
+
+        function getTenantBills() {
+            $.get("/api/bills", function (data) {
+                allUserBillInfo = data
+                console.log(data)
+            });
+        }
 
     function renderTenantList(rows) {
         tenantList.children().not(":last").remove();
@@ -96,7 +121,7 @@ $(document).ready(function () {
         // Pulls up a modal with tenant details
         newTr.append("<td><button type ='button' class='btn btn-secondary' id='view-lease' data-userid=" + tenantData.id + ">View Details</button></td>");
         // For now "View Billing Info" will show the same info as "View Details" but once we associate the correct model with this button it should be able to pull details from "bill.js"
-        newTr.append("<td><button type ='button' class='btn btn-secondary' id='view-lease' data-userid=" + tenantData.id + ">View Details</button></td>");
+        newTr.append("<td><button type ='button' class='btn btn-secondary' id='view-bills' data-billingid=" + tenantData.id + ">View Details</button></td>");
         // For now this Delete button doesn't do anything until we can add DELETE function to it.
         newTr.append("<td><button type ='button' class='btn btn-danger' id='delete-tenants' data-userid="  + tenantData.id + ">Delete</button></td>");
         return newTr;
