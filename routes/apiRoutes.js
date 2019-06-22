@@ -11,9 +11,13 @@ module.exports = function(app) {
       res.json(dbtenants);
     });
   });
-
-  
-  
+  // Add user POST route
+  app.post("/api/tenants", function(req, res) {
+    db.Tenant.create(req.body).then(function(dbTenant) {
+      res.json(dbTenant);
+    });
+  });
+   
   app.get("/api/units/:id", function(req, res) {
     //  Displays all tenants living in a specific building
     db.Unit.findAll({
@@ -42,12 +46,14 @@ module.exports = function(app) {
   });
 
   // Displays all of a Tenants Current Bills
-  app.get("/api/bills", function(req, res) {
+  app.get("/api/bills/:id", function(req, res) {
+    console.log(req.params.id);
     db.Bill.findAll({
-      // where: {
-      //   id: req.body.id,
-      //   include: [db.Charges]
-      // }
+      where: {
+        id: req.params.id,
+ 
+      },
+      // include: [db.Charges]
     }).then(function(dbtenants) {
       res.json(dbtenants);
     });
@@ -106,10 +112,6 @@ module.exports = function(app) {
     });
   });
 
-
-
-
-
 // ALL LEASE RELATED ROUTES
 
   // Displays all leases that are month to month 
@@ -148,53 +150,3 @@ app.delete("/api/tenants/:id", function(req, res) {
 
 
 };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-  
-  
-  
-  
-  
-//   // Delete an example by id
-//   app.delete("/api/examples/:id", function(req, res) {
-//     db.Example.destroy({ where: { id: req.params.id } }).then(function(dbExample) {
-//       res.json(dbExample);
-//     });
-//   });
-
-
-
-
-//   // Get all or one tenants per ID
-//   app.get("/api/tenants", function(req, res) {
-//     db.Example.findAll({}).then(function(dbTenants) {
-//       res.json(dbTenants);
-//     });
-//   });
-
-//   // Get all or one bills per ID
-//   // Get one complex
-//   // Get all or one leases per ID
-//   // Get all or one units per ID
-
-
-// };
