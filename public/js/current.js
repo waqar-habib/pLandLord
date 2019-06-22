@@ -138,7 +138,8 @@ $(document).ready(function () {
       url: "/api/tenants/" + id
       })
         .then(getTenants);
+        location.reload();
       }
-
+      
     });
 

@@ -4,6 +4,7 @@ $(document).ready(function() {
         console.log("response back to front end was", data);
         $("#modalContactForm").modal("show");
         $("#modalContactForm").modal("hide");
+        location.reload();
       });
     }
 
