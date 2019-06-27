@@ -7,7 +7,6 @@ module.exports = function(sequelize, DataTypes) {
       term: DataTypes.INTEGER,
       url: DataTypes.STRING,
       unit_id: DataTypes.INTEGER,
-      tenant_id: DataTypes.INTEGER,
       month_to_month:DataTypes.BOOLEAN
       
     });
