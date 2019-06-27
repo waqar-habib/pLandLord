@@ -1,9 +1,9 @@
 {
   "development": {
-    "username": "root",
-    "password": "bootcamp",
-    "database": "complex_db",
-    "host": "localhost",
+    "username": "opvb5bipdf2vskwb",
+    "password": "qnov8gv4bwoydvy3",
+    "database": "v18hjxxfyjq9titn",
+    "host": "u0zbt18wwjva9e0v.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
     "dialect": "mysql"
   },
   "test": {
