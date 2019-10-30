@@ -18,7 +18,7 @@
     "mysql": "^2.17.1",
     "mysql2": "^1.6.5",
     "path": "^0.12.7",
-    "sequelize": "^5.8.10",
+    "sequelize": "^5.15.1",
     "startbootstrap-landing-page": "^5.0.6"
   },
   "devDependencies": {
